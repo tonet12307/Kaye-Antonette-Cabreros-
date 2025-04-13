@@ -1,0 +1,21 @@
+function showAlert() {
+  alert("Welcome to IT Society! 🚀 Let's get started!");
+}
+
+window.addEventListener('scroll', () => {
+  const heroImage = document.querySelector('.hero-image');
+  const position = heroImage.getBoundingClientRect().top;
+  const screenHeight = window.innerHeight;
+
+  if (position < screenHeight - 100) {
+    heroImage.style.opacity = '1';
+    heroImage.style.transform = 'scale(1.05)';
+    heroImage.style.transition = 'all 1s ease-out';
+  }
+});
+
+window.addEventListener('load', () => {
+  const heroImage = document.querySelector('.hero-image');
+  heroImage.style.opacity = '0';
+  heroImage.style.transform = 'scale(0.8)';
+});
